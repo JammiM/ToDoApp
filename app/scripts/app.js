@@ -16,8 +16,15 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ui.sortable'
+    'ui.sortable',
+    'LocalStorageModule'
   ])
+
+  //sets the localStorageServiceProvider to a prefix of 'ls'
+  .config(['localStorageServiceProvider', function(localStorageServiceProvider){
+    localStorageServiceProvider.setPrefix('ls');
+  }])
+  
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
