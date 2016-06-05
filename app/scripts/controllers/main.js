@@ -9,7 +9,7 @@
  */
 angular.module('toDoAppApp')
   .controller('MainCtrl', function ($scope) {
-    $scope.todos = ['clean room', 'Get milk', 'get tea bags'];
+    $scope.todos = [];
 
     //function to add todo then clears the field
     $scope.addTodo = function () {
